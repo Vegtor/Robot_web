@@ -1,0 +1,12 @@
+/target
+/.vscode
+.vscode
+!.vscode/launch.json
+/.env
+.env
+package-lock.json
+package.json
+.env
+styles/input.css
+tailwind.config.js
+.env

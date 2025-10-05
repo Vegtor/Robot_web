@@ -1,0 +1,200 @@
+.btn_menu
+{
+	text-align: center;
+	display: block;
+	border: solid black 1px;
+	width: 200px;
+	height: fit-content;
+	padding-right: 1px;
+	z-index: 0;
+	color: white;
+	border-radius: 6px;
+}
+
+
+.nested_sortable
+{
+	display: flex;
+	flex-direction: column;
+	min-height: 25px;
+	width: 75%;
+	height: fit-content;
+	margin: 3px -2px 5px auto;
+	z-index: 2;
+	padding-right: 10px;
+	border-radius: 6px;
+}
+
+.if_statement_field
+{
+	display: flex;
+	flex-direction: column;
+	height: 25px;
+	width: 35px;
+	margin-top: 2px;
+	margin-right: -2px;
+	padding-right: 10px;
+	z-index: 2;
+	border-radius: 5px;
+}
+
+.center
+{
+	margin: auto;
+	width: 50%;
+	padding: 10px;
+}
+
+#sequence_list
+{
+	display: flex;
+	flex-direction: column;
+	border: solid black 1px;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button
+{
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number]
+{
+	-moz-appearance:textfield;
+}
+
+.custom-number-input input:focus
+{
+	outline: none !important;
+}
+
+.custom-number-input button:focus
+{
+	outline: none !important;
+}
+
+/*Scroll pro sweet alert**********************************************/
+.sweetscroll::-webkit-scrollbar {
+	width: 20px;
+}
+
+.sweetscroll::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+.sweetscroll::-webkit-scrollbar-thumb {
+	background-color: #d6dee1;
+	border-radius: 20px;
+	border: 6px solid transparent;
+	background-clip: content-box;
+}
+
+.sweetscroll::-webkit-scrollbar-thumb:hover {
+	background-color: #a8bbbf;
+}
+
+
+h1 {
+    font-size: 36px;
+    line-height: 40px;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 40px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+/* Won't be used here */
+
+h5 {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+h6 {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+ul, ol { 
+    display: block;
+    list-style: disc outside none;
+    margin: 1em 0;
+    padding: 0 0 0 40px;
+}
+ol { 
+    list-style-type: decimal;
+}
+li { 
+    display: list-item;
+}
+ul ul, ol ul {
+    list-style-type: circle;
+    margin-left: 15px; 
+}
+ol ol, ul ol { 
+    list-style-type: lower-latin;
+    margin-left: 15px; 
+}
+
+.header, .cont {
+	text-align: center;
+	padding: 5px;
+}
+
+.header label{
+	font-size: 2vh;
+}
+
+#sequence{
+	position: absolute;
+	top: 10%;
+	left: 37.5%;
+	width: 40%;
+	margin: 0 auto;
+}
+
+.one:hover span:last-child {
+	width: 100%;
+}
+
+.two:hover span {
+	width: 50%;
+}
+
+.three:hover span {
+	height: 100%;
+}
+
+.gray-even {
+	width: 100%;
+	background-color: #CCCCCC;
+}
+
+.gray-odd {
+	width: 100%;
+	background-color: #DDDDDD;
+}
+
+.gold{
+	width: 100%;
+	background-color: #FDD440FF;
+}
+
+.half {
+	width: 50%;
+}

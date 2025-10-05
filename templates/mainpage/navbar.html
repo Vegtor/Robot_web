@@ -1,0 +1,32 @@
+<nav id="navbar" class="flex items-center justify-between flex-wrap bg-nav_color p-2.5 ">
+    <div class="w-full flex flex-row">
+        <div class="text-xl pt-1.5 w-full">
+            <a href="./manual" id="test" class="text-txt_color hover:text-hvr_txt_color mr-4">
+                Návod
+            </a>
+            <a href="./editor" class=" text-txt_color hover:text-hvr_txt_color mr-4">
+                Editor
+            </a>
+            <a href="./" class=" text-txt_color hover:text-hvr_txt_color mr-4">
+                Hra
+            </a>
+            {% if show_logout_button %}
+            <a href="./commands" class=" text-txt_color hover:text-hvr_txt_color mr-4">
+                Správa funkcí
+            </a>
+            <a href="./stats" class=" text-txt_color hover:text-hvr_txt_color mr-4">
+                Žebříčky
+            </a>
+            {% endif %}
+        </div>
+        {% if show_logout_button %}
+        <div class="w-full h-fit flex flex-row justify-end cursor-pointer">
+            <a id="logout-link">
+                <div class="w-fit h-fit ml-0.5 bg-white text-nav_color font-bold py-2 px-4 border-nav_color hover:bg-variable_color rounded">
+                    Odhlášení
+                </div>
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</nav>

@@ -1,0 +1,46 @@
+{% extends "mainpage/layout.html" %}
+{% block content %}
+    {% include "mainpage/navbar.html" %}
+<div class="mt-4 w-4" style="width: 50%; margin-left: 25%">
+    <h1 id="n-vod" class="mb-4 mt-4">Návod</h1>
+    <p>Pokud chcete hrát, musíte se registrovat vyplněním formuláře.</p>
+    <h2 id="hra" class="mb-4 mt-4">Hra</h2>
+    <p>Po úspěšném přihlášení jste přesměrováni na hrací plátno. V levém bloku jsou umístěny příkazy, ze kterých si můžete vytvářet funkce.</p>
+    <h3 id="panel-funkc-" class="mb-4 mt-4">Panel funkcí</h3>
+    <ul>
+        <li><b>Cyklus</b> - provede zadanou sekvenci příkazů tolikrát, kolikrát uvedete.</li>
+        <li><b>Pokud</b> - podmínka. Například příkazy zadané do těla Pokud(zeď) se provedou v případě, že robot směřuje do zdi.</li>
+        <li><b>Pokud nebo</b> - podmínka. Například příkazy zadané do těla Pokud(zeď) se provedou v případě, že robot směřuje do zdi, ale pokud do zdi nesměřuje, provedou se příkazy v těle Nebo.</li>
+        <li><b>Dokud neni</b> -cyklus s podmínkou. Provádí se příkazy v těle, dokud není splněná zadaná podmínka.</li>
+        <li><b>Krok</b> - posune robota o jedno políčko vpřed směrem, kam je nasměrován.</li>
+        <li><b>Rotace</b> - Otočí robota o jeden směr po směru hodinových ručiček.</li>
+    </ul>
+    <h3 id="panel-podm-nek" class="mb-4 mt-4">Panel podmínek</h3>
+    <ul>
+        <li><b>Sever</b> - pokud robot směřuje nahoru.</li>
+        <li><b>Jih</b> - pokud robot směřuje dolu.</li>
+        <li><b>Severozápad</b> - pokud robot směřuje mírně nahoru a doleva.</li>
+        <li><b>Severovýchod</b> - pokud robot směřuje mírně nahoru a doprava.</li>
+        <li><b>Jihozápad</b> - pokud robot směřuje mírně dolu a doleva.</li>
+        <li><b>Jihovýchod</b> - pokud robot směřuje mírně dolu a doprava.</li>
+        <li><b>Zeď</b> - pokud robot směřuje do zdi.</li>
+    </ul>
+    <p>Do prostředního bloku se přesunují příkazy, které chcete vykonat. Přetahují se na základě podrž myš, přesuň a pusť.</p>
+    <p>V pravém bloku je vidět mapa. </p>
+    <ul>
+        <li><b>Šedé políčko</b> - prázdné políčko, na které může robot vstoupit.</li>
+        <li><b>Černé políčko</b> - překážka = políčko, na které nemůže robot vstoupit.</li>
+        <li><b>Modré políčko</b> - start, na kterém je robot umístěn.</li>
+        <li><b>Červené políčko</b> - cíl, kam se musíte dostat pro splnění levelu.</li>
+        <li><b>Šedé políčko s hvězdou</b> - prázdné políčko, na které může robot vstoupit a sebrat hvězdu, která odečítá 3 kroky.</li>
+    </ul>
+    <p>Dole pod tímto blokem jsou umístěna 3 tlačítka:</p>
+    <ul>
+        <li><b>Vykonej</b> - vykoná Vámi zadanou funkci, pokud ale nedosáhnete cíle, robot se vrátí zpátky na start.</li>
+        <li><b>Vyčisti</b> - vyčistí prostřední blok s příkazy.</li>
+        <li><b>Ulož funkci</b> - uloží Vámi zadanou funkci.</li>
+    </ul>
+    <h2 id="editor" class="mb-4 mt-4">Editor</h2>
+    <p>V editoru máte možnost vytvořit si vlastní mapu. Nahoře jsou textová pole, kam můžete vložit pouze čísla pro určení velikosti mapy. Po zadání těchto čísel musíte kliknout na tlačítko <b>nastav</b>, aby přenastavil rozměry mapy . Dále si zaškrtnete, co chcete do mapy přidat (překážka/start/cíl/hvězda). Každá mapa musí obsahovat start, který tam může být pouze jednou a stejně tak cíl. Po dokončení Vámi vytvořené mapy stisknete uprostřed dole tlačítko <b>uložit mapu</b> a Vaše mapa se uloží a budete si ji moci zahrát.</p>
+</div>
+    {% endblock content %}

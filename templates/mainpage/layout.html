@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="cs" class="h-full">
+<head>
+    <title>Robot</title>
+    <meta charset="utf-8">
+    <link href="../../external/tailwind_out.css" rel="stylesheet">
+    <link href="../../styles/main_style.css" rel="stylesheet">
+    {% block libraries %}
+
+    {% endblock libraries %}
+</head>
+<body class="h-full w-full">
+<div id="main_flex_col" class="flex flex-col h-screen">
+    {% block content %}
+
+    {% endblock content %}
+    {% block additional_scripts %}
+
+    {% endblock additional_scripts %}
+    <script src="../../js/doormat.js"></script>
+</div>
+</body>
+</html>

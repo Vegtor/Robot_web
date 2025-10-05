@@ -1,0 +1,33 @@
+{% extends "mainpage/layout.html" %}
+{% block libraries %}
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{% endblock libraries %}
+{% block content %}
+    {% set show_logout_button = false %}
+    {% include "mainpage/navbar.html" %}
+    <div class="bg-grey-lighter h-full flex flex-col">
+        <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
+            <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full border border-grey-light">
+                <h1 class="mb-8 text-3xl text-center">Registrace</h1>
+                <input type="text" class="block border border-grey-light w-full p-3 rounded mb-4" name="username" placeholder="Přezdívka/nickname" />
+                <input type="text" class="block border border-grey-light w-full p-3 rounded mb-4" name="email" placeholder="E-mail" />
+                <input type="password" class="block border border-grey-light w-full p-3 rounded mb-4" name="password" placeholder="Heslo" />
+                <input type="password" class="block border border-grey-light w-full p-3 rounded mb-4" name="confirm_password" placeholder="Potvrzení hesla" />
+                <button type="submit" onclick="submitForm()" class="w-full text-center py-3 rounded bg-nav_color text-txt_color hover:text-hvr_txt_color focus:outline-none my-1"> Registrovat </button>
+                <div class="text-center text-sm text-grey-dark mt-4">Registrací přijímáte
+                    <a class="no-underline border-b border-grey-dark text-grey-dark" href="#">
+                        podmínky užití
+                    </a>
+                    a
+                    <a class="no-underline border-b border-grey-dark text-grey-dark" href="#">
+                        zásady ochrany osobních údajů</a>.
+                </div>
+            </div>
+            <div class="text-grey-dark mt-6 text-center">
+                Už máte účet? Skvělé! Stačí se pouze
+                <a class="no-underline border-b border-blue text-blue" href="./login">přihlásit</a>. To je taky zadarmo!
+            </div>
+        </div>
+    </div>
+{% endblock content %}

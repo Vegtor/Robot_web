@@ -1,0 +1,22 @@
+{% extends "mainpage/layout.html" %}
+{% block content %}
+    {% set show_logout_button = false %}
+    {% include "mainpage/navbar.html" %}
+    <div class="bg-grey-lighter h-full flex flex-col">
+        <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
+            <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full border border-grey-light">
+                <h1 class="mb-8 text-3xl text-center">Přihlášení</h1>
+                
+                <form action="/api/login" method="post">
+                    <input type="text" class="block border border-grey-light w-full p-3 rounded mb-4" name="username" placeholder="Přezdívka/nickname" />
+                    <input type="password" class="block border border-grey-light w-full p-3 rounded mb-4" name="password" placeholder="Heslo" />
+                    <button type="submit" class="w-full text-center py-3 rounded bg-nav_color text-txt_color hover:text-hvr_txt_color focus:outline-none my-1"> Přihlásit </button>
+                </form>
+                
+                <div class="text-grey-dark mt-6 text-center">
+                    Nemáte účet? Není nic lehčího než se <a class="no-underline border-b border-blue text-blue" href="./signup">registrovat</a>. A je to zadarmo!
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

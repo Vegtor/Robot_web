@@ -1,0 +1,50 @@
+{% extends "mainpage/layout.html" %}
+{% block libraries %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://unpkg.com/konva@9/konva.min.js"></script>
+<script src="https://unpkg.com/rxjs@^7/dist/bundles/rxjs.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+{% endblock libraries %}
+{% block content %}
+{% set show_logout_button = true %}
+{% include "mainpage/navbar.html" %}
+<div id="map_controls" class="flex flex-row mt-2 w-full h-fit items-center content-center">
+    <div class="w-fit h-fit m-auto">
+        <input type="text" id="inputRows" placeholder="Počet řádků" class="mr-2 border-2 border-nav_color">
+        <input type="text" id="inputColumns" placeholder="Počet sloupců" class="mr-2 border-2 border-nav_color">
+        <button id="buttonDimensions" class="mr-2  w-fit h-fit ml-0.5 bg-white text-nav_color font-bold py-2 px-4 border-2 border-nav_color hover:bg-variable_color rounded">Nastav</button>
+        <label class="mr-2">
+            <input type="radio" name="radioGroup" id="radioObstacle" checked> Překážka
+        </label>
+        <label class="mr-2">
+            <input type="radio" name="radioGroup" id="radioStar" checked> Hvězdička
+        </label>
+        <label class="mr-2">
+            <input type="radio" name="radioGroup" id="radioStart"> Start
+        </label>
+        <label>
+            <input type="radio" name="radioGroup" id="radioFinish"> Cíl
+        </label>
+    </div>
+</div>
+<div id="map_div" class="h-full w-full flex flex-row items-center content-center">
+    <div class="w-[42%]"></div>
+    <div id="map_source" class="h-full w-full block overflow-auto">
+
+    </div>
+    <div class="w-[42%]"></div>
+</div>
+<div class="w-fit h-fit m-auto">
+    <button id="buttonSaveMap" class="m-auto w-fit h-fit ml-0.5 bg-white text-nav_color font-bold py-2 px-4 border-2 border-nav_color hover:bg-variable_color rounded">Uložit mapu</button>
+</div>
+{% endblock content %}
+{% block additional_scripts %}
+<script src="../js/hive.js"></script>
+<script src="../js/mapcraft.js"></script>
+<script>
+    level.start = {x: -1, y: -1};
+    level.finish = {x: -1, y: -1};
+    gridArray = Array.from({ length: 7 }, () => Array.from({ length: 7}, () => FieldType.empty));
+    handleResize();
+</script>
+{% endblock additional_scripts %}

@@ -1,0 +1,6 @@
+<div id="custom_functions_list" class="h-full w-full flex flex-col items-center">
+    {% for function in functions %}
+    <div class="btn_menu bg-items_color" data-command="{{ function.function }}">{{function.name}}
+    </div>
+    {% endfor %}
+</div>

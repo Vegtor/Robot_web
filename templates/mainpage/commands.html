@@ -1,0 +1,54 @@
+<div id="menu_list" class="h-full w-full flex flex-col items-center">
+    <div class="btn_menu bg-items_color cycle w-full h-fit justify-end">
+        <div class="w-full h-fit flex flex-row justify-end">
+            <a class="mr-2">Opakuj</a>
+            <div class="w-fit h-fit custom-number-input flex flex-row justify-end">
+                <button name="increment" class="h-fit w-[15px] m-0 font-bold text-white" onclick="cycle_n(this)">+</button>
+                <input name="cycle_combo_box" type="number" value="0" min="0" class="min-w-[27.246px] w-[27.246px] h-fit text-center m-0 cycle_combo_box text-black rounded-[6px]" oninput="input_resize(this)" onkeydown="omit_keys(this)" onfocusout="off_zero(this)">
+                <button name="decrement" class="h-fit w-[15px] m-0 font-bold text-white" onclick="cycle_n(this)">-</button>
+            </div>
+        </div>
+        <div class="nested_sortable bg-nested_color border-nested_color">
+        </div>
+    </div>
+
+    <div class="btn_menu bg-items_color if_podm w-full h-fit">
+        <div class="w-full h-fit flex flex-row justify-end">
+            <a class="mr-2">Pokud </a>
+            <div class="if_statement_field bg-nested_color border-nested_color "> </div>
+        </div>
+        <div class="nested_sortable bg-nested_color border-nested_color"> </div>
+    </div>
+
+    <div class="btn_menu bg-items_color if_else_podm w-full h-fit">
+        <div class="w-full h-fit flex flex-row justify-end">
+            <a class="mr-2">Pokud </a>
+            <div class="if_statement_field bg-nested_color border-nested_color "> </div>
+        </div>
+
+        <div class="nested_sortable bg-nested_color border-nested_color">
+        </div>
+        <div class="w-full h-fit flex flex-row justify-end">
+            <div class="w-full h-fit flex justify-end">
+                <a>nebo</a>
+            </div>
+        </div>
+        <div class="nested_sortable bg-nested_color border-nested_color">
+        </div>
+    </div>
+    <div class="btn_menu bg-items_color while w-full h-fit">
+        <div class="w-full h-fit flex flex-row justify-end">
+            <a class="mr-2">Dokud není</a>
+            <div class="if_statement_field bg-nested_color border-nested_color "> </div>
+        </div>
+        <div class="nested_sortable bg-nested_color border-nested_color">
+        </div>
+    </div>
+    <div class="btn_menu bg-items_color move">Krok
+    </div>
+    <div class="btn_menu bg-items_color rotate">Rotace
+    </div>
+</div>
+<div class="h-4 w-full">
+
+</div>
